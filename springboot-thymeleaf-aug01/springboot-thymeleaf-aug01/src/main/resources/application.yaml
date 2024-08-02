@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: springboot-thymeleaf-30
+  datasource:
+    url: jdbc:mysql://localhost/nareshit-7am
+    username: root
+    password:root
