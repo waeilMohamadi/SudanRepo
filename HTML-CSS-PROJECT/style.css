@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Dancing+Script:wght@400..700&family=Lexend+Deca:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sankofa+Display&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    --primary-yellow:  #f6db35;
+    --primar-yellow:#ffc510;
+    --comic-red:#ee5454;
+    transition: all 1s ease;
+}
+body {
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  height: 100vh;
+  background:linear-gradient(var(--primary-yellow),var(--comic-red));
+  background-attachment: fixed;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    align-items: center;
+   
+}
+nav ul{
+    display: flex;
+    gap: 30px;
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+a:hover{
+    color: var(--comic-red);
+}
+header .log{
+    font-size: 48px;
+    animation:jumping 1s ease infinite alternate;
+    color: var(--comic-red);
+}
+header .log span{
+ 
+    color: var(--comic-red);
+}
+/* Banners start */
+#banner{
+    padding: 50px 100px;
+    display: flex;
+    gap:30px
+}
+.right img{
+    height: 500px;
+    background-blend-mode: multiply;
+    mix-blend-mode: multiply;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.left h1{
+    font-size: 52px;
+    color: var(--comic-red);
+
+}
+.left span{
+    color: var(--primar-yellow);
+}
+.left p{
+    font-size: 23px;
+    line-height: 36px;
+    letter-spacing: 3px;
+}
+.left buttons{
+    display: flex;
+    gap:20px
+}
+.buttons button{
+    background-color: black;
+    color:white;
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+    font-family: "Bangers", system-ui;
+    font-size: 18px;
+    letter-spacing: 5px;
+}
+.buttons button:hover{
+   background-color: var(--comic-red);
+   color: var(--primar-yellow);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Animations*/
+@keyframes jumping {
+    0%{
+        position: relative;
+        bottom:0px
+    }
+  100%{
+        position: relative;
+        bottom: 50px;
+  }    
+}
+
+
+
+@media(min-width:562) and (max-width:768){
+    header{
+        flex-direction: column;
+    }
+   #banner{
+    flex-direction: column-reverse;
+   }
+   .left{
+    gap:20px
+   }
+}
+@media (max-width:580px){
+ header{
+    flex-direction: column;
+ }
+ nav ul{
+    flex-direction: column;
+}
+#banner{
+    flex-direction: column-reverse;
+   }
+   .right img{
+    height: 300px;
+   }
+   .left h1{
+    font-size: 48px;
+   }
+   .left p{
+    font-size: 16px;
+   }
+   .left{
+    gap: 20px;
+   }
+}
+
+
+
